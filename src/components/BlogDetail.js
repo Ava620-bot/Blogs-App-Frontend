@@ -26,7 +26,7 @@ const BlogDetail = () => {
   const id = useParams().id;  //useParams hook helps us to get the id of blog from the url
   console.log(id); 
   const fetchDetails = async()=>{
-    const res = await axios.get(`http://localhost:3000/api/blog/${id}`).catch(err=>console.log(err));
+    const res = await axios.get(`https://blogs-app-api.onrender.com/api/blog/${id}`).catch(err=>console.log(err));
     const data = await res.data;
     return data;
   }
@@ -41,7 +41,7 @@ const BlogDetail = () => {
   }, [id]); //here whenever the id at the url params will change for every particular blog to edit it will re render the component and useEffect will get that id to call the get fucntion to the backend to fetch the blog details
    console.log(blog);
    const sendRequest = async()=>{
-    const res = await axios.put(`http://localhost:3000/api/blog//update/${id}`,{
+    const res = await axios.put(`https://blogs-app-api.onrender.com/api/blog//update/${id}`,{
       title:inputs.title,
       description:inputs.description
     }).catch(err=>console.log(err))

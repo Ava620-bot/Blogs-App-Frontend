@@ -15,7 +15,7 @@ function AddBlog() {
     description:""
   });
   const sendRequest = async()=>{
-    const res = await axios.post('http://localhost:3000/api/blog/add',{
+    const res = await axios.post('https://blogs-app-api.onrender.com/api/blog/add',{
       title:inputs.title,
       imageUrl:inputs.imageUrl,
       description:inputs.description,

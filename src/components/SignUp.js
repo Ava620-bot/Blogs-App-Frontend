@@ -16,7 +16,7 @@ function SignUp() {
     password:""
   });
   const sendRequest = async(type="signup")=>{
-    const res = await axios.post(`http://localhost:3000/api/user/${type}`, {
+    const res = await axios.post(`https://blogs-app-api.onrender.com/api/user/${type}`, {
       name: inputs.name,
       email: inputs.email,
       password: inputs.password 

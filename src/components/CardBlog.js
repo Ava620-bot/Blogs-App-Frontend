@@ -11,7 +11,7 @@ const CardBlog = ({title, description, imageUrl, userName, isUser, id}) => {
     navigate(`/myblogs/${id}`);
   }
   const deleteRequest = async()=>{
-    const res = await axios.delete(`http://localhost:3000/api/blog/${id}`).catch(err=>console.log(err));
+    const res = await axios.delete(`https://blogs-app-api.onrender.com/api/blog/${id}`).catch(err=>console.log(err));
     const data = await res.data;
     return data;
   }

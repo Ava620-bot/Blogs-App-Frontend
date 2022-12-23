@@ -16,7 +16,7 @@ function Login() {
     password:""
   });
   const sendRequest = async(type="login")=>{
-    const res = await axios.post(`http://localhost:3000/api/user/${type}`, {
+    const res = await axios.post(`https://blogs-app-api.onrender.com/api/user/${type}`, {
       //http://localhost:3000/api
       name: inputs.name,
       email: inputs.email,
